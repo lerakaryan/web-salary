@@ -1,0 +1,40 @@
+/* Main app layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+app-sidebar {
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  margin-left: 0;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  app-sidebar {
+    position: fixed;
+    left: -250px;
+    transition: left 0.3s ease;
+    
+    &.opened {
+      left: 0;
+    }
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
