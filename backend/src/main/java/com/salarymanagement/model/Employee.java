@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
 
+// КОммент 1 git add . git commit -m "Пробую гит" git push
+
 @Data
 @Entity
 @Table(name = "employees")
